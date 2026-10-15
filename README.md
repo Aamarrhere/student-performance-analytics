@@ -5,9 +5,9 @@
 
 | | |
 |---|---|
-| **Student Name** | `<Your Name>` |
+| **Student Name** | PAL AMAR RAJESH |
 | **Course** | Python with AI – EWB Courses |
-| **Submission Date** | `<Date>` (deadline: 15 October 2026) |
+| **Submission Date** | 15 October 2026 |
 
 ## 2. Objective
 Teachers usually hold student marks in spreadsheets and calculate totals, grades and
@@ -93,7 +93,6 @@ Top 5:  1. Anjali Verma (94.6)   2. Kavya Reddy (90.0)   3. Aarav Sharma (88.0)
 Correlation (attendance vs average marks): 0.982
 ```
 
-> Optional: add screenshots of your terminal output in a `screenshots/` folder and link them here.
 
 ## 8. Final Outcome
 The project reads the student dataset and produces a complete performance report without
@@ -103,13 +102,20 @@ departments. Attendance and marks show a very strong positive correlation (0.98)
 two students who failed were also among those with the lowest attendance.
 
 ## 9. Challenges & Learning
-- **Defining a fair pass rule**: I chose "at least 40 in every subject" instead of using only the average, so a student cannot hide a failing subject behind high marks elsewhere.
-- **Converting between Pandas and NumPy**: `.to_numpy()` made row-wise calculations with `axis=1` easy.
-- **Keeping code reusable**: I moved all logic into `functions.py` so `main.py` only displays results.
-- **Learning**: I practised loops, functions, NumPy array operations and Pandas groupby, and learned how to structure a project and publish it on GitHub.
+**Problems I faced and how I solved them**
+- **Pass/Fail rule:** I was not sure how to decide who passes. If I used only the average, a student with very low marks in one subject could still pass. So I made a rule that a student must get at least 40 in every subject.
+- **Row-wise calculation:** Calculating total and average for each student was confusing at first. I converted the marks columns with `.to_numpy()` and used `axis=1` in `np.sum` and `np.mean`, and it worked.
+- **Grade logic:** The order of the grade rules matters. I put them from highest (90) to lowest and used a loop, so the first matching rule gives the grade.
+- **Keeping code clean:** I put all the calculation functions in `functions.py` and kept `main.py` only for printing results, so the code is easier to read.
+
+**What I learned**
+- How to use functions, loops and conditions in a real project
+- NumPy operations like sum, mean, max, min, median, std and corrcoef
+- Pandas loading, filtering, sorting and groupby
+- How to organize a project and upload it to GitHub
 
 ## 10. GitHub Repository
-`https://github.com/<your-username>/student-performance-analytics`
+`https://github.com/Aamarrhere/student-performance-analytics`
 
 ## How to Run
 ```bash
