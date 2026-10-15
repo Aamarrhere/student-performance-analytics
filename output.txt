@@ -1,0 +1,126 @@
+
+======================================================================
+1. DATASET OVERVIEW
+======================================================================
+Number of records : 20
+Number of columns : 9
+Columns           : ['Student_ID', 'Name', 'Department', 'Maths', 'Physics', 'Chemistry', 'English', 'Computer_Science', 'Attendance']
+Missing values    : 0
+
+First 5 records:
+Student_ID           Name Department  Maths  Physics  Chemistry  English  Computer_Science  Attendance
+      S001   Aarav Sharma        CSE     92       88         85       79                96          94
+      S002    Priya Patil        CSE     78       72         80       85                88          91
+      S003    Rohan Mehta        ECE     65       58         62       70                74          82
+      S004 Sneha Kulkarni        ECE     88       91         84       90                86          96
+      S005    Karan Singh Mechanical     45       52         48       60                55          68
+
+======================================================================
+2. PROCESSED STUDENT REPORT
+======================================================================
+Student_ID             Name Department  Total_Marks  Average_Marks Grade Result  Attendance Attendance_Status
+      S001     Aarav Sharma        CSE          440           88.0     A   Pass          94                OK
+      S002      Priya Patil        CSE          403           80.6     A   Pass          91                OK
+      S003      Rohan Mehta        ECE          329           65.8     C   Pass          82                OK
+      S004   Sneha Kulkarni        ECE          439           87.8     A   Pass          96                OK
+      S005      Karan Singh Mechanical          260           52.0     D   Pass          68               Low
+      S006     Anjali Verma        CSE          473           94.6    A+   Pass          98                OK
+      S007     Vikram Joshi Mechanical          218           43.6     E   Fail          62               Low
+      S008       Neha Desai      Civil          365           73.0     B   Pass          88                OK
+      S009       Aditya Rao      Civil          303           60.6     C   Pass          79                OK
+      S010       Pooja Nair        ECE          403           80.6     A   Pass          90                OK
+      S011     Manish Gupta Mechanical          251           50.2     D   Pass          72               Low
+      S012        Riya Shah        CSE          371           74.2     B   Pass          85                OK
+      S013   Siddharth Iyer      Civil          208           41.6     E   Fail          58               Low
+      S014      Kavya Reddy        ECE          450           90.0    A+   Pass          95                OK
+      S015     Harsh Pandey Mechanical          299           59.8     D   Pass          76                OK
+      S016      Divya Menon        CSE          412           82.4     A   Pass          89                OK
+      S017 Nikhil Choudhary      Civil          267           53.4     D   Pass          70               Low
+      S018    Ishita Bansal        ECE          359           71.8     B   Pass          87                OK
+      S019      Tanmay Kale        CSE          286           57.2     D   Pass          74               Low
+      S020     Meera Pillai      Civil          434           86.8     A   Pass          93                OK
+
+======================================================================
+3. CLASS PERFORMANCE SUMMARY
+======================================================================
+Highest average : 94.6  (Anjali Verma)
+Lowest average  : 41.6  (Siddharth Iyer)
+Class average   : 69.7
+Median average  : 72.4
+Std deviation   : 16.13
+
+======================================================================
+4. PASS / FAIL STATISTICS
+======================================================================
+Total students  : 20
+Passed          : 18
+Failed          : 2
+Pass percentage : 90.0%
+(Rule: pass only if marks >= 40 in every subject)
+
+Subjects failed by each failing student:
+  - Vikram Joshi: Maths, Chemistry
+  - Siddharth Iyer: Maths, Chemistry
+
+======================================================================
+5. GRADE DISTRIBUTION
+======================================================================
+  A+  : ## (2)
+  A   : ###### (6)
+  B   : ### (3)
+  C   : ## (2)
+  D   : ##### (5)
+  E   : ## (2)
+  F   :  (0)
+
+======================================================================
+6. SUBJECT-WISE ANALYSIS
+======================================================================
+         Subject  Average  Highest  Lowest  Pass_%       Topper
+           Maths    68.15       95      33    90.0 Anjali Verma
+         Physics    66.80       93      40   100.0 Anjali Verma
+       Chemistry    67.00       97      35    90.0 Anjali Verma
+         English    73.45       91      52   100.0 Meera Pillai
+Computer_Science    73.10       99      45   100.0 Anjali Verma
+
+Best subject (highest average)   : English
+Weakest subject (lowest average) : Physics
+
+======================================================================
+7. DEPARTMENT-WISE ANALYSIS
+======================================================================
+            Students  Avg_Marks  Avg_Attendance  Passed
+Department                                             
+CSE                6      79.50            88.5       6
+ECE                5      79.20            90.0       5
+Civil              5      63.08            77.6       4
+Mechanical         4      51.40            69.5       3
+
+======================================================================
+8. TOP 5 PERFORMING STUDENTS
+======================================================================
+ Rank Student_ID           Name Department  Total_Marks  Average_Marks Grade
+    1       S006   Anjali Verma        CSE          473           94.6    A+
+    2       S014    Kavya Reddy        ECE          450           90.0    A+
+    3       S001   Aarav Sharma        CSE          440           88.0     A
+    4       S004 Sneha Kulkarni        ECE          439           87.8     A
+    5       S020   Meera Pillai      Civil          434           86.8     A
+
+======================================================================
+9. ATTENDANCE INSIGHTS
+======================================================================
+Students with attendance below 75%: 6
+            Name  Attendance  Average_Marks Result
+     Karan Singh          68           52.0   Pass
+    Vikram Joshi          62           43.6   Fail
+    Manish Gupta          72           50.2   Pass
+  Siddharth Iyer          58           41.6   Fail
+Nikhil Choudhary          70           53.4   Pass
+     Tanmay Kale          74           57.2   Pass
+
+Correlation (attendance vs average marks): 0.982
+
+======================================================================
+DONE
+======================================================================
+Full results saved to 'student_results.csv'
